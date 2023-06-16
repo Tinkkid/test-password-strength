@@ -8,6 +8,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class PasswordFormComponent implements OnInit {
   strongPassword = false;
+  visible: boolean = true;
+  changeType: boolean = true;
 
   passwordForm: FormGroup;
 
@@ -23,11 +25,6 @@ export class PasswordFormComponent implements OnInit {
   get f() {
     return this.passwordForm.controls;
   }
-
-  // onPasswordStrengthChanged(event: boolean) {
-  //   this.strongPassword = event;
-  // }
-
   ngOnInit(): void {}
 
   onSubmit() {
@@ -36,5 +33,10 @@ export class PasswordFormComponent implements OnInit {
       return;
     }
     this.passwordForm.reset();
+  }
+
+  viewPassword() {
+    this.visible = !this.visible;
+    this.changeType = !this.changeType;
   }
 }
