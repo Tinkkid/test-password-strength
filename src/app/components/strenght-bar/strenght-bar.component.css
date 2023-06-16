@@ -1,0 +1,23 @@
+.strength {
+  display: flex;
+  flex-direction: column;
+}
+
+.strengthBar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bar {
+  background: #ddd;
+  border-radius: 2px;
+  display: inline-block;
+  height: 15px;
+  margin-right: 1px;
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
